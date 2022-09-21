@@ -1,0 +1,8 @@
+то что нашел дима, для конфигурационки
+
+curl -H "Accept: application/vnd.github+json" https://api.github.com/repos/matplotlib/matplotlib/releases/latest | grep "browser_download_url" | cut -d : -f 2,3 | tr -d \" | wget -qi -
+
+Вот эта команда по идее должна качать, но она не может, потому что api ничего не выдаёт
+Если у вас пишет, что api недоступно, то вот это введите:
+git config —global —unset https.proxy
+git config —global —unset http.proxy
